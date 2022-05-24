@@ -3,12 +3,29 @@
 <html style="height:100%;">
   
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  
+  <style>
+    .tabcontent {
+      display: none;
+    }
+  </style>
   <title>urmom</title>
   
   <body style="background:#222;height:100%;margin:0;display:grid;">
     
-    <img src="https://c.tenor.com/E52k-N0FJCAAAAAM/koishi-komeiji-touhou.gif" width="1000" height="200" alt="urmom">
+   <div>
+     <button onclick="openKoishi(event, 'koishi')">urmom</button>
+   </div>
+    
+   <div id="koishi" class="tabcontent">
+     <img src="https://c.tenor.com/E52k-N0FJCAAAAAM/koishi-komeiji-touhou.gif" width="1000" height="200" alt="urmom">
+   </div>
+    
+    <script>
+      function openKoishi(evt, fumo) {
+        document.getElementById(fumo).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
     
   </body>
   
